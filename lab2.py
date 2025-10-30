@@ -1,5 +1,15 @@
 data = input("->")
 
+def calc_with_brakcets(data):
+    
+    start_index = data.index("(")
+    end_index = data.rindex(")")
+    update_data = data[start_index+1:end_index]
+    
+    data = data.replace(data[start_index:end_index+1],str(calc(update_data)))
+
+    return data
+
 def calc_with_priority(data):
     
     # updated_data = data
@@ -42,9 +52,14 @@ def calc_without_priority(data):
 def calc(data):
     res = 0
     updated_data = data
-    if "*" in data or "/" in data:
-        updated_data = calc_with_priority(data)
-    res = calc_without_priority(updated_data)
+    if "(" in data:
+        updated_data = calc_with_brakcets(data)
+    if "*" in updated_data or "/" in updated_data:
+        updated_data = calc_with_priority(updated_data)
+    if "+" in updated_data or "-" in updated_data:
+        res = calc_without_priority(updated_data)
+    else:
+        return updated_data
     return res
 
 def make_operation(operator,x,y):
