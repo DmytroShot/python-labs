@@ -1,0 +1,8 @@
+id,age,department,city,salary,experience_years,position,name
+1,28.0,IT,Kyiv,,,,Anna
+2,35.0,Finance,Lviv,2500.0,5.0,Accountant,Bohdan
+3,41.0,HR,Odessa,3000.0,10.0,HR Manager,Iryna
+4,30.0,IT,Kyiv,2700.0,4.0,Developer,Mykola
+5,29.0,Finance,Lviv,2600.0,3.0,Analyst,Oksana
+6,33.0,HR,Kharkiv,2800.0,6.0,HR Specialist,Sergii
+7,,,,2200.0,2.0,Support,Oleksii
